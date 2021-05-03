@@ -1,5 +1,5 @@
 //don't forget apply plugins id kotlin-android-extensions
-apply:plugins {
+plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'

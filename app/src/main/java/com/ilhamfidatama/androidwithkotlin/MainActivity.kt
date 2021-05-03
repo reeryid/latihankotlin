@@ -1,5 +1,6 @@
 package com.ilhamfidatama.androidwithkotlin
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
     private lateinit var btnSignIn: Button*/
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,7 +42,8 @@ class MainActivity : AppCompatActivity() {
         btn_signin.setOnClickListener {
             Toast.makeText(this, "username ${edt_username.text} dan password anda ${edt_password.text}", Toast.LENGTH_LONG).show()
             txt_result.text = "username ${edt_username.text} dan password anda ${edt_password.text}"
-            val username = edt_username.text
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
